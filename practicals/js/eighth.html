@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+/* Define initial background color for the body */
+body {
+background-color: white;
+}
+</style>
+</head>
+<body id="body" style="text-align:center;">
+<!-- JavaScript to handle background color change -->
+<script>
+// Function to change the background color on mouseover
+function changeBackgroundColorOnMouseOver() {
+document.getElementById("body").style.backgroundColor = "pink";
+}
+// Function to change the background color on focus
+function changeBackgroundColorOnFocus() {
+document.getElementById("body").style.backgroundColor = "skyblue";
+}
+// Function to reset the background color
+function resetBackgroundColor() {
+document.getElementById("body").style.backgroundColor = "white";
+}
+// Attach event listeners for mouseover and mouseout
+document.getElementById("body").addEventListener("mouseover",
+changeBackgroundColorOnMouseOver);
+document.getElementById("body").addEventListener("mouseout",
+resetBackgroundColor);
+// Function to handle the focus event
+function handleFocusEvent() {
+changeBackgroundColorOnFocus();
+}
+</script>
+<!-- Your existing content -->
+<h2>42208 Yash Bodkhe</h2>
+<h2> Society for Computer Technology and Research's </h2>
+<h1> Pune Institute of Computer Technology </h1>
+<h4> Department of Electronics and Telecommunications </h4>
+<!-- Add a button with onfocus event -->
+<button onfocus="handleFocusEvent()">Focus Me</button>
+</body>
+</html>
